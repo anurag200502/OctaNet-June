@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cocacola Website Landing Page</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <header>
+            <a href="#"><img src="./assets/logo.png" class="logo"></a>
+            <div class="toggle" onclick="toggleMenu()"></div>
+            <ul class="navigation">
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">What's New</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </header>
+        <div class="content">
+            <div class="textBox">
+               <h2>Taste the Feeling</h2> 
+               <p>We've established a portfolio of drinks that are best positioned to grow in an ever-changing marketplace. From trademark Coca-Cola to Sports, Juice & Dairy Drinks, Alcohol Ready-to-Drink Beverages and more, discover some of our most popular brands in North America and from around the world.</p>
+                <a href="#">Learn More</a>
+            </div>
+
+            <div class="imgBox">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide"><img src="./assets/cocacola1.png"></div>
+                        <div class="swiper-slide"><img src="./assets/cocacola2.png"></div>
+                        <div class="swiper-slide"><img src="./assets/cocacola3.png"></div>
+                        <div class="swiper-slide"><img src="./assets/cocacola4.png"></div>
+                        <div class="swiper-slide"><img src="./assets/cocacola5.png"></div>
+                        <div class="swiper-slide"><img src="./assets/cocacola6.png"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <ul class="sci">
+            <li><a href="#"><img src="./assets/facebook.png"></a></li>
+            <li><a href="#"><img src="./assets/twitter.png"></a></li>
+            <li><a href="#"><img src="./assets/instagram.png"></a></li>
+        </ul>
+    </section>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            effect: 'coverflow',
+            grabCursor: true,
+            centeredSlides: true,
+            slidesPerView: 'auto',
+            coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 200,
+                modifier: 1,
+                slideShadows: true,
+            },
+            pagination: {
+                el: '.swiper-pagination',
+            },
+            loop: true,
+        });
+        function toggleMenu(){
+            const menuToggle = document.querySelector('.toggle');
+            const navigation = document.querySelector('.navigation')
+            menuToggle.classList.toggle('active')
+            navigation.classList.toggle('active')
+        }
+    </script>
+</body>
+</html>
